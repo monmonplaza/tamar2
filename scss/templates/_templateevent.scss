@@ -1,0 +1,135 @@
+.templateevent {
+  overflow-x: hidden;
+  margin-bottom: 8rem;
+  &__wrapper {
+    grid-template-columns: 67% 1fr;
+    grid-gap: 10rem;
+    @include mediaQuery($break-md) {
+      grid-template-columns: 1fr;
+      grid-gap: 5rem;
+    }
+  }
+
+  &__body {
+    ul {
+      list-style: disc;
+      margin-left: 1rem;
+    }
+  }
+
+  &__info {
+    align-self: flex-start;
+    padding: 2rem 3rem;
+    background-color: $color-tertiary;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-bottom: 2rem;
+      li {
+        margin-bottom: 1rem;
+        i {
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.ourspaces {
+  &__wrapper {
+    text-align: center;
+    max-width: 82rem;
+
+    margin: 2rem auto 5rem;
+    h3 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    small {
+      font-size: 1rem;
+      vertical-align: super;
+    }
+  }
+}
+
+.filter {
+  margin-bottom: 4rem;
+
+  &__wrapper {
+    display: flex;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 2rem;
+
+    @include mediaQuery($break-md) {
+      flex-direction: column;
+    }
+    ul.show {
+      display: flex;
+      @include mediaQuery($break-md) {
+        justify-content: center;
+      }
+    }
+    ul {
+      display: none;
+
+      li {
+        margin-right: 1rem;
+        align-self: flex-end;
+        a {
+          padding: 1rem 1.4rem;
+          font-weight: bold;
+        }
+
+        a.active {
+          background-color: $color-primary;
+          color: $color-light;
+          &:hover {
+            background-color: darken($color-primary, 10);
+          }
+        }
+      }
+    }
+  }
+
+  &__select {
+    @include mediaQuery($break-md) {
+      margin-top: 4rem;
+    }
+    label {
+      display: block;
+      font-size: 1.4rem;
+    }
+
+    select {
+      padding: 0.8rem 1.2rem;
+
+      width: 15rem;
+      @include mediaQuery($break-md) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__wrapper.space--between {
+    justify-content: space-between;
+  }
+  &__wrapper.flex--end {
+    justify-content: flex-end;
+  }
+}
+
+.wedding__card {
+  display: none;
+}
+.wedding__card.show {
+  display: block;
+}

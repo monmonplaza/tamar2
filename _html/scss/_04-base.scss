@@ -1,0 +1,41 @@
+// * {
+//   border: 1px solid red !important;
+// }
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+  @include mediaQuery($break-sm) {
+    font-size: 58%;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  color: $color-dark;
+  font-family: $font-reg;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: $color-dark;
+}
+
+.container {
+  max-width: 140rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+h3 {
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  @include mediaQuery($break-sm) {
+    margin-bottom: 1rem;
+  }
+}

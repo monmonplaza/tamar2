@@ -1,0 +1,33 @@
+.pagination {
+  min-height: 40rem;
+  background: {
+    size: cover;
+    position: center center;
+    repeat: no-repeat;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 120rem;
+    margin: 0 auto;
+    align-items: center;
+    min-height: inherit;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &__link {
+    color: $color-light;
+    margin: 0 1rem;
+    span {
+      font-size: 2.5rem;
+      line-height: 1;
+    }
+    h3 {
+      font-size: 5rem;
+      line-height: 1;
+    }
+  }
+}

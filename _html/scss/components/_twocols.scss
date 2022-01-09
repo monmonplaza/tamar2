@@ -1,0 +1,168 @@
+.twocol {
+  overflow-x: hidden;
+  &__wrapper {
+    grid-template-columns: 1fr 1fr;
+    @include mediaQuery($break-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__content {
+    padding: 10rem 0;
+    max-width: 60rem;
+    @include mediaQuery($break-md) {
+      max-width: 90rem;
+      padding: 5rem;
+    }
+    @include mediaQuery($break-sm) {
+      padding: 1.5rem;
+    }
+  }
+
+  h2 {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    margin-bottom: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: bold;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2rem;
+      right: 0;
+      width: 50vw;
+      height: 3px;
+      background-color: $color-secondary;
+    }
+    span {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1.6rem;
+      color: $color-secondary;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__body {
+    @include mediaQuery($break-md) {
+      max-width: 90rem;
+      width: 100%;
+    }
+
+    p {
+      margin-bottom: 1.6rem;
+    }
+
+    ul {
+      margin-bottom: 1.6rem;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  &__img {
+    background-color: $color-tertiary;
+    padding: 10rem 0;
+    position: relative;
+    @include mediaQuery($break-md) {
+      padding: 5rem 1.5rem;
+    }
+    @include mediaQuery($break-sm) {
+      padding: 5rem 0rem;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 100%;
+      height: 100%;
+      width: 100%;
+      background-color: $color-tertiary;
+      @include mediaQuery($break-md) {
+        display: none;
+      }
+    }
+
+    .slider {
+      transform: translateX(-4rem);
+      width: calc(100% + 4rem);
+      @include mediaQuery($break-md) {
+        width: 100%;
+        transform: translateX(0);
+      }
+
+      &__card {
+        position: relative;
+        img {
+          display: block;
+          width: 100%;
+        }
+      }
+      &__body {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 2rem 1.4rem;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: $color-light;
+        @include mediaQuery($break-sm) {
+          padding: 1rem;
+        }
+        h3 {
+          font-size: clamp(1.4rem, 5vw, 2rem);
+          font-family: $font-bold;
+          color: $color-secondary;
+          margin-bottom: 1rem;
+          @include mediaQuery($break-sm) {
+            margin-bottom: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.twocol:nth-child(odd) {
+  .twocol__content {
+    order: 2;
+    padding-left: 10rem;
+    position: relative;
+    @include mediaQuery($break-md) {
+      padding-left: 0rem;
+      padding: 5rem;
+    }
+
+    @include mediaQuery($break-sm) {
+      padding: 1.5rem;
+    }
+  }
+
+  h2 {
+    &::after {
+      right: unset;
+      left: 0;
+    }
+  }
+
+  .twocol__img {
+    @include mediaQuery($break-md) {
+      order: 2;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      height: 100%;
+      width: 100%;
+      background-color: $color-tertiary;
+    }
+    .slider {
+      transform: translateX(0);
+    }
+  }
+}

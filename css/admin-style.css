@@ -1,0 +1,14 @@
+.dashboard__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  width: 80rem;
+}
+
+.dashboard__item {
+  padding: 1rem;
+  border: 1px solid #b4b4b4;
+}
+/*# sourceMappingURL=admin-style.css.map */

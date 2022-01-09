@@ -1,0 +1,274 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  @include mediaQuery($break-sm) {
+    min-height: 50vh;
+  }
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 40vw;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    color: $color-light;
+    @include mediaQuery($break-sm) {
+      top: 60%;
+      left: 50%;
+      width: 80%;
+    }
+    h1 {
+      font-family: $font-bolder;
+      font-size: clamp(4rem, 5vw, 9rem);
+      line-height: 1.2;
+    }
+    ul {
+      li {
+        margin-right: 2rem;
+        a.btn--outline {
+          border-color: $color-light;
+          &:hover {
+            background-color: $color-light;
+            color: $color-dark;
+          }
+        }
+      }
+    }
+  }
+
+  &__video {
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    top: -2vh;
+    width: 100%;
+    iframe {
+      width: 100%;
+      height: 102vh;
+      @include mediaQuery($break-sm) {
+        display: none;
+      }
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.hservices {
+  &__wrapper {
+    grid-template-columns: 1fr 1fr 1fr;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-light;
+    outline: 2px solid $color-light;
+    outline-offset: -2rem;
+    background: {
+      size: cover;
+      position: center center;
+      repeat: no-repeat;
+    }
+
+    @include mediaQuery($break-xs) {
+      height: 40rem;
+    }
+  }
+
+  &__content {
+    max-width: 45rem;
+    text-align: center;
+    @include mediaQuery($break-md) {
+      max-width: 32rem;
+    }
+    span {
+      text-transform: uppercase;
+      color: $color-secondary;
+      font-family: $font-bold;
+      font-size: 1.8rem;
+    }
+
+    h3 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-family: $font-bold;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    a {
+      &:hover {
+        background-color: $color-light;
+        color: $color-dark;
+      }
+    }
+  }
+}
+
+.testimonial {
+  background-color: $color-tertiary;
+
+  padding: 10rem 0;
+  overflow-x: hidden;
+  @include mediaQuery($break-xs) {
+    padding: 5rem 0;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-family: $font-bold;
+  }
+  &__slider {
+    padding: 15rem 0;
+    background: {
+      image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://64.media.tumblr.com/81757100f43bb8b41d3dd6d79e02c357/tumblr_pf2vhv8kKM1x58qn8o4_400.png");
+      size: cover;
+      position: center center;
+    }
+  }
+
+  &__item {
+    padding: 0 2rem;
+  }
+  &__wrap {
+    place-items: center;
+    text-align: center;
+    color: $color-light;
+
+    h3 {
+      font-size: 2.5rem;
+
+      font-family: $font-bold;
+      color: $color-secondary;
+    }
+    img {
+      width: 6rem;
+      height: 6rem;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      display: flex;
+      margin-bottom: 2rem;
+      li {
+        margin-right: 1rem;
+        i {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+  .slick {
+    &-arrow {
+      font-size: 2rem;
+      z-index: 10;
+      height: 100%;
+      width: 4rem;
+      padding: 2rem;
+      padding-left: 1rem;
+    }
+
+    &-dots {
+      bottom: -4rem;
+      li button::before {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        border-radius: 50%;
+        background-color: $color-primary;
+      }
+    }
+    &-prev {
+      left: 0rem;
+
+      &:hover {
+        background-image: linear-gradient(
+          -90deg,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.1)
+        );
+      }
+    }
+    &-next {
+      right: 0rem;
+
+      &:hover {
+        background-image: linear-gradient(
+          -90deg,
+          rgba(0, 0, 0, 0.1),
+          rgba(0, 0, 0, 0)
+        );
+      }
+    }
+
+    &-prev::before {
+      font-family: FontAwesome;
+      content: "\f104";
+      font-size: 22px;
+    }
+    &-next::before {
+      font-family: FontAwesome;
+      content: "\f105";
+      font-size: 22px;
+    }
+  }
+}
+
+.hdeal {
+  padding: 10rem 0;
+  @include mediaQuery($break-xs) {
+    padding: 5rem 0;
+  }
+  &__wrapper {
+    grid-template-columns: 2.5fr 1fr;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr;
+    }
+    img {
+      width: 100%;
+      max-height: 45rem;
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+  &__content {
+    display: grid;
+    place-items: center;
+    padding: 4rem;
+    background-color: $color-primary;
+    color: $color-light;
+    @include mediaQuery($break-xs) {
+      padding: 2rem;
+    }
+    h3 {
+      font-size: 3rem;
+
+      font-weight: bold;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+}

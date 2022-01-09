@@ -1,0 +1,77 @@
+.footer {
+  background-color: $color-primary;
+  padding: 5rem 0 0;
+  &__wrapper {
+    grid-template-columns: 3fr 1fr 2fr 2fr;
+    grid-gap: 5rem;
+    @include mediaQuery($break-sm) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include mediaQuery($break-xs) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    color: $color-light;
+    img {
+      float: left;
+      padding-right: 2rem;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    ul {
+      margin-bottom: 1rem;
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      a {
+        color: $color-light;
+      }
+    }
+  }
+
+  &__contact {
+    ul li:first-child {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+  }
+
+  &__form {
+    input {
+      width: 100%;
+      padding: 1rem 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    button {
+      width: 100%;
+    }
+  }
+}
+.copyright {
+  background-color: $color-primary-d;
+  color: $color-light;
+  margin-top: 3rem;
+  &__wrapper {
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  ul {
+    li {
+      margin-left: 1.5rem;
+      a {
+        color: $color-light;
+      }
+    }
+  }
+}

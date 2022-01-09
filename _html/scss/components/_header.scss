@@ -1,0 +1,105 @@
+.header.scrolled {
+  .header__top {
+    max-height: 0;
+  }
+  .header__icon {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .header__low {
+    background-color: $color-primary;
+  }
+  .header__logo img {
+    width: 7rem;
+  }
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+  &__top {
+    background-color: $color-light;
+    max-height: 9rem;
+    height: auto;
+    transition: max-height 0.2s ease;
+    &__wrapper {
+      justify-content: flex-end;
+      padding: 1rem 0;
+      position: relative;
+      .header__logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        img {
+          width: 8rem;
+          transition: width 0.2s ease;
+        }
+      }
+    }
+  }
+
+  &__low {
+    padding-bottom: 1rem;
+    &__wrapper {
+      justify-content: flex-end;
+    }
+  }
+
+  &__icon {
+    @include transition;
+    li {
+      margin-left: 3rem;
+    }
+  }
+
+  &__nav {
+    ul {
+      margin-top: 1rem;
+
+      li {
+        position: relative;
+        a {
+          padding: 1.4rem;
+          font-family: $font-bold;
+          color: $color-light;
+          font-size: 1.8rem;
+        }
+
+        ul {
+          position: absolute;
+          max-height: 0rem;
+          height: auto;
+          transition: max-height 0.2s cubic-bezier(0.17, 0.67, 0.28, 1.01);
+          overflow: hidden;
+          width: auto;
+          background-color: rgba($color-light, 0.2);
+          border-left: 1px solid rgba($color-light, 0.2);
+          // border-bottom: 1px solid rgba($color-light, 0.2);
+          border-right: 1px solid rgba($color-light, 0.2);
+          li {
+            white-space: nowrap;
+
+            border-bottom: 1px solid rgba($color-light, 0.2);
+            a {
+              width: 100%;
+              padding: 1.2rem 1.3rem;
+              display: block;
+              &:hover {
+                color: $color-secondary;
+              }
+            }
+          }
+        }
+      }
+
+      li:hover ul {
+        max-height: 45rem;
+      }
+      li:nth-child(7):hover ul {
+        max-height: 45rem;
+        left: -4rem;
+      }
+    }
+  }
+}

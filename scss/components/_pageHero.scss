@@ -1,0 +1,22 @@
+.page__hero {
+  min-height: 40vh;
+  position: relative;
+  background: {
+    size: cover;
+    position: top center;
+    repeat: no-repeat;
+  }
+
+  .page__container {
+    @extend .container;
+    position: relative;
+  }
+
+  h1 {
+    position: absolute;
+
+    font-size: clamp(3rem, 5vw, 4rem);
+    color: $color-light;
+    bottom: 3rem;
+  }
+}

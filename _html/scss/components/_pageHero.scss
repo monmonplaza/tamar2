@@ -1,0 +1,26 @@
+.page__hero {
+  min-height: 40vh;
+  background: {
+    size: cover;
+    position: top center;
+    repeat: no-repeat;
+  }
+
+  .page__container {
+    @extend .container;
+    position: relative;
+  }
+
+  h1 {
+    position: absolute;
+    top: 25rem;
+    font-size: clamp(3rem, 5vw, 4rem);
+    color: $color-light;
+    @include mediaQuery($break-md) {
+      top: 40rem;
+    }
+    @include mediaQuery($break-sm) {
+      top: 20rem;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.dashboard {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    width: 80rem;
+  }
+  &__item {
+    padding: 1rem;
+    border: 1px solid #b4b4b4;
+  }
+}

@@ -1,0 +1,35 @@
+.breadcrumb {
+  padding: 5rem 0;
+  @include mediaQuery($break-sm) {
+    padding: 3rem 0;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      font-weight: bold;
+      a {
+        transition: 0.5s ease;
+        &.goHome {
+          padding: 0 1rem;
+        }
+
+        &:hover {
+          color: $color-secondary;
+        }
+
+        i {
+          padding-right: 1rem;
+        }
+      }
+    }
+    li:last-child {
+      i {
+        padding-right: 1rem;
+      }
+    }
+  }
+}

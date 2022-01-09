@@ -1,0 +1,17 @@
+.btn {
+  &--primary {
+    @include btn($color-primary, $color-light, $color-primary);
+  }
+
+  &--secondary {
+    @include btn($color-secondary, $color-light, $color-secondary);
+  }
+
+  &--tertiary {
+    @include btn($color-tertiary, $color-light, $color-tertiary);
+  }
+
+  &--outline {
+    @include btn(transparent, $color-light, $color-light);
+  }
+}

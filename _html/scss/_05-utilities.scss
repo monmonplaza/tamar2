@@ -1,0 +1,24 @@
+.d {
+  &--flex {
+    display: flex;
+  }
+
+  &--grid {
+    display: grid;
+  }
+
+  &--block {
+    display: block;
+  }
+}
+
+$sizes: 1, 2, 3, 4, 5;
+
+@each $size in $sizes {
+  .mb--#{$size} {
+    margin-bottom: #{$size}rem;
+  }
+  .mt--#{$size} {
+    margin-top: #{$size}rem;
+  }
+}

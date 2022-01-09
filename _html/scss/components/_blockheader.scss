@@ -1,0 +1,28 @@
+.block--header {
+  span {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    display: block;
+    color: $color-secondary;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  h2 {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 4rem;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -1rem;
+      right: 0;
+      width: 50rem;
+      height: 2px;
+      background-color: $color-secondary;
+    }
+  }
+}

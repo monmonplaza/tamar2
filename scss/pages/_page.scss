@@ -1,0 +1,13 @@
+.page.default__page {
+  .page__wrapper {
+    max-width: 95rem;
+    margin: 0 auto;
+    padding: 0rem 0 10rem;
+    h2 {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: bold;
+    }
+  }
+}

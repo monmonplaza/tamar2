@@ -1,0 +1,22 @@
+.cta {
+  background-color: $color-primary-d;
+  color: $color-light;
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    @include mediaQuery($break-sm) {
+      flex-direction: column;
+    }
+    h3 {
+      margin-bottom: 0;
+      font-size: clamp(1.6rem, 5vw, 2rem);
+      font-weight: bold;
+      margin-right: 2rem;
+      @include mediaQuery($break-sm) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.templateevent {
+  overflow-x: hidden;
+  margin-bottom: 8rem;
+  &__wrapper {
+    grid-template-columns: 67% 1fr;
+    grid-gap: 10rem;
+    @include mediaQuery($break-md) {
+      grid-template-columns: 1fr;
+      grid-gap: 5rem;
+    }
+  }
+
+  &__info {
+    align-self: flex-start;
+    padding: 2rem 3rem;
+    background-color: $color-tertiary;
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin-bottom: 2rem;
+      li {
+        margin-bottom: 1rem;
+        i {
+          padding-right: 1rem;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      margin-bottom: 1rem;
+    }
+  }
+}

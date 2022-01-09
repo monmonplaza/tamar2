@@ -1,0 +1,63 @@
+.career {
+  &__item {
+    margin-bottom: 5rem;
+  }
+
+  &__item__wrapper {
+    grid-template-columns: 35rem 1fr;
+    grid-gap: 5rem;
+    @include mediaQuery($break-md) {
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+    }
+  }
+
+  &__info {
+    margin-bottom: 3rem;
+    @include mediaQuery($break-md) {
+      margin-bottom: 1rem;
+    }
+    &__block {
+      margin-bottom: 3rem;
+      @include mediaQuery($break-md) {
+        margin-bottom: 1rem;
+      }
+    }
+    span {
+      display: block;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: $color-secondary;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    &__body {
+      header {
+        justify-content: space-between;
+
+        background-color: #f2f2f2;
+        margin-bottom: 2rem;
+        align-items: center;
+        & > * {
+          margin-bottom: 0;
+        }
+        h3 {
+          font-weight: bold;
+          padding-left: 1rem;
+        }
+      }
+
+      article {
+        padding: 1rem;
+      }
+    }
+  }
+}
